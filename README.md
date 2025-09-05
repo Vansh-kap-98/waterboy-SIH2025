@@ -34,32 +34,28 @@ It combines a **React + Vite frontend** with a **Python backend** powered by **L
 ## 📂 Project Structure
 waterboy-chatbot/
 │
-├── backend/ # Python backend (Flask + LangChain)
-│ ├── app.py # Main API server
-│ ├── CentralReport.csv # Groundwater dataset
-│ ├── requirements.txt # Python dependencies
+├── backend/                # Python backend (Flask + LangChain)
+│   ├── app.py              # Main API server
+│   ├── CentralReport.csv   # Groundwater dataset
+│   ├── requirements.txt    # Python dependencies
 │
-├── frontend/ # React + Vite frontend
-│ ├── index.html
-│ ├── src/
-│ │ ├── App.jsx # Main UI
-│ │ ├── Chatbot.jsx # Chat component
-│ │ ├── api.js # API calls
-│ ├── package.json
-│ ├── vite.config.js
-│ ├── .env # Backend API URL config
+├── frontend/               # React + Vite frontend
+│   ├── index.html
+│   ├── src/
+│   │   ├── App.jsx         # Main UI
+│   │   ├── Chatbot.jsx     # Chat component
+│   │   ├── api.js          # API calls
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── .env                # Backend API URL config
 │
-└── README.md
-
-yaml
-Copy code
-
+└── README.md  
 ---
 
 ## ⚙️ Setup Guide
 
 ### 1. Clone the Repository
-```bash
+bash
 git clone https://github.com/yourusername/waterboy-chatbot.git
 cd waterboy-chatbot
 2. Backend Setup (Flask + LangChain + TinyLlama)
@@ -79,8 +75,6 @@ tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf → TinyLlama model (download separately).
 
 Run the backend:
 
-bash
-Copy code
 python app.py
 Backend will start at:
 👉 http://localhost:5000/api/ask
@@ -93,8 +87,6 @@ curl -X POST http://localhost:5000/api/ask \
   -H "Content-Type: application/json" \
   -d '{"question": "What is the groundwater recharge in Jaipur district?"}'
 3. Frontend Setup (React + Vite)
-bash
-Copy code
 cd frontend
 npm install
 npm run dev
@@ -104,13 +96,9 @@ Frontend will start at:
 4. Configure API URL
 Create .env in frontend/:
 
-bash
-Copy code
 VITE_API_URL=http://localhost:5000/api/ask
 Update fetch calls:
 
-javascript
-Copy code
 const response = await fetch(import.meta.env.VITE_API_URL, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
