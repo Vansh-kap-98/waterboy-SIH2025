@@ -33,23 +33,25 @@ It combines a **React + Vite frontend** with a **Python backend** powered by **L
 
 ## 📂 Project Structure
 waterboy-chatbot/
-│
-├── backend/ # Python backend (Flask + LangChain)
-│ ├── app.py # Main API server
-│ ├── CentralReport.csv # Groundwater dataset
-│ ├── requirements.txt # Python dependencies
-│
-├── frontend/ # React + Vite frontend
-│ ├── index.html
-│ ├── src/
-│ │ ├── App.jsx # Main UI
-│ │ ├── Chatbot.jsx # Chat component
-│ │ ├── api.js # API calls
-│ ├── package.json
-│ ├── vite.config.js
-│ ├── .env # Backend API URL config
-│
-└── README.md
+|
+|-- backend/                         # Python backend (Flask + LangChain)
+|   |-- app.py                       # Main API server
+|   |-- CentralReport.csv            # Groundwater dataset
+|   |-- requirements.txt             # Python dependencies
+|
+|-- frontend/                        # React + Vite frontend
+|   |-- index.html
+|   |-- src/
+|   |   |-- App.jsx                  # Main UI
+|   |   |-- Chatbot.jsx              # Chat component
+|   |   |-- api.js                   # API calls
+|   |
+|   |-- package.json
+|   |-- vite.config.js
+|   |-- .env                         # Backend API URL config
+|
+|-- README.md
+
 ---
 
 ## ⚙️ Setup Guide
